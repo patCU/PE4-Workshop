@@ -31,10 +31,11 @@ int* userChoice(char player){
     return temp;
 }
 
-void DisplayBoard(int** arr){
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-            std::cout << arr[j][i] << " " << std::endl;
+void displayBoard(int** a){
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout << a[i][j] << " ";
+            if(j == 2){cout << " " << endl;}
         }
     }
 }
