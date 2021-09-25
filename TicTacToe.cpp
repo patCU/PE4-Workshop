@@ -31,6 +31,14 @@ int* userChoice(char player){
     return temp;
 }
 
+void DisplayBoard(int** arr){
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            std::cout << arr[j][i] << " " << std::endl;
+        }
+    }
+}
+
 
 int main(){
     char player_one = 'X';
