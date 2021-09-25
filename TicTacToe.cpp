@@ -47,12 +47,18 @@ void displayBoard(int** a){
 
 int main(){
     char player_one = 'X';
+    char player_two = 'O';
     int* choices;
-    
+
     int** b = CreateBoard();
-    
-    choices = userChoice(player_one);
-    
-    b = PlaceMarker(b, choices[0], choices[1], 1);
+    //loop through 9 times for total squares
+    for(int i=0;i<9;i++){
+      choices = userChoice(player_one);
+      b = PlaceMarker(b, choices[0], choices[1], 1);
+      displayBoard(b);
+      choices = userChoice(player_two);
+      b = PlaceMarker(b, choices[0], choices[1], 2);
+      displayBoard(b);
+    }
 
 }
