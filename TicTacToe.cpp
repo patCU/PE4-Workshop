@@ -11,9 +11,27 @@ int** CreateBoard(){
     return a;
 }
 
+
 int** PlaceMarker(int** a, int r, int c, int val){
     a[r][c] = val;
     return a;
+}
+
+
+int* GetPlayerChoice(char player){
+    int rowInput;
+    cout << "Player: " << player << " please select row: ";
+    cin >> rowInput;
+    
+    int colInput;
+    cout << "please select col: ";
+    cin >> colInput;
+    cout << " " << endl;
+    
+    int* temp = new int[2];
+    temp[0] = rowInput;
+    temp[1] = colInput;
+    return temp;
 }
 
 
